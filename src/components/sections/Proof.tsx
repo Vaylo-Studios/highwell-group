@@ -1,44 +1,50 @@
+import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-const FLOOR = [
-  { tag: "PRESS", title: "Digital Presses", body: "Short-run and variable-data production." },
-  { tag: "WIDE", title: "Large-Format Equipment", body: "Banners, murals, and vehicle wraps." },
-  { tag: "CUT", title: "Laser Cutters", body: "Acrylic, wood, and sign components." },
-  { tag: "ADD", title: "3D Printers", body: "Prototypes and dimensional pieces." },
-  { tag: "FIN", title: "Finishing & Assembly", body: "Die cutting, foil, mounting, kitting." },
-  { tag: "SHIP", title: "Fulfillment Floor", body: "Storage, pick, pack, and distribution." },
+const GALLERY = [
+  { src: "/images/signage-displays.jpg", alt: "Backlit dimensional signage and a hexagon-panel display in an office lobby" },
+  { src: "/images/print.jpg", alt: "Branded folder and business card flat lay" },
+  { src: "/images/packaging.jpg", alt: "Branded gift packaging and coordinating cards" },
+  { src: "/images/mail-fulfillment.jpg", alt: "Branded shipping boxes and mailers staged for fulfillment" },
 ];
 
 export default function Proof() {
   return (
-    <section className="border-b border-border bg-background">
+    <section id="work" className="border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <h2 className="font-display max-w-xl text-3xl uppercase leading-tight text-ink md:text-5xl">
-            Made here.
+            Built for brands that build big.
           </h2>
-          <p className="max-w-sm text-sm leading-relaxed text-text-secondary">
-            Not mockups. Not stock photography. Real machines, real
-            projects, real quantities, moving through one building.
-          </p>
+          <div className="max-w-sm">
+            <p className="text-sm leading-relaxed text-text-secondary">
+              We partner with companies, agencies, and organizations to
+              deliver physical experiences that make an impact.
+            </p>
+            <Link
+              href="/#project"
+              className="mt-4 inline-block text-sm font-medium text-navy transition-colors hover:text-navy-deep"
+            >
+              View Our Work &rarr;
+            </Link>
+          </div>
         </Reveal>
 
-        <div className="mt-14 divide-y divide-border border-t border-border">
-          {FLOOR.map((f, i) => (
+        <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          {GALLERY.map((img, i) => (
             <Reveal
-              key={f.tag}
-              delay={i * 0.03}
-              className="group flex flex-col gap-2 py-6 transition-colors duration-300 hover:bg-surface md:flex-row md:items-baseline md:gap-8 md:px-4"
+              key={img.src}
+              delay={i * 0.04}
+              className="relative aspect-[3/4] overflow-hidden rounded-sm border border-border"
             >
-              <span className="font-spec w-20 shrink-0 text-[11px] text-text-muted">
-                {f.tag}
-              </span>
-              <p className="font-display shrink-0 text-lg text-ink md:w-64">
-                {f.title}
-              </p>
-              <p className="text-sm leading-relaxed text-text-secondary">
-                {f.body}
-              </p>
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className="object-cover transition-transform duration-500 hover:scale-105"
+              />
             </Reveal>
           ))}
         </div>

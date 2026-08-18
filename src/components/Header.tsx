@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
+import NavLinks from "@/components/NavLinks";
 
-const NAV = [
+export const NAV = [
   { label: "Capabilities", href: "/#capabilities" },
-  { label: "Industries", href: "/#industries" },
-  { label: "Shop", href: "/#shop" },
-  { label: "Start a Project", href: "/#project" },
+  { label: "Work", href: "/#work" },
+  { label: "About", href: "/#about" },
+  { label: "Resources", href: "/#resources" },
 ];
 
 export default function Header() {
@@ -16,31 +18,23 @@ export default function Header() {
           <Image
             src="/brand/highwell-logo.png"
             alt="Highwell Group"
-            width={200}
-            height={12}
+            width={1178}
+            height={70}
             className="h-6 w-auto md:h-7"
             priority
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="font-kicker text-[11px] text-text-secondary transition-colors hover:text-navy"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
 
         <Link
           href="/#project"
-          className="rounded-sm bg-navy px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-navy-deep"
+          className="btn-press hidden rounded-full bg-lavender-ink px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-navy md:inline-block"
         >
-          Start a Project
+          Talk To Us
         </Link>
+
+        <MobileNav />
       </div>
     </header>
   );

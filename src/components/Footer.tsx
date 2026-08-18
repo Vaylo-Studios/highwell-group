@@ -1,27 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const DIVISIONS = [
-  "Print",
-  "Sign",
-  "Make",
-  "Mail",
-  "Pack",
-  "Fulfill",
+const CAPABILITIES = [
+  { label: "Print & Collateral", href: "/#capabilities" },
+  { label: "Signage & Displays", href: "/#capabilities" },
+  { label: "Fabrication", href: "/#capabilities" },
+  { label: "3D Printing", href: "/#capabilities" },
+  { label: "Packaging", href: "/#capabilities" },
+  { label: "Mail & Fulfillment", href: "/#capabilities" },
 ];
 
-const COMPANY = [
-  { label: "Capabilities", href: "/#capabilities" },
+const WORK = [
+  { label: "All Projects", href: "/#work" },
+  { label: "Case Studies", href: "/#work" },
   { label: "Industries", href: "/#industries" },
-  { label: "Start a Project", href: "/#project" },
-  { label: "Shop", href: "/#shop" },
+];
+
+const ABOUT = [
+  { label: "Our Story", href: "/#about" },
+  { label: "Our Team", href: "/#about" },
+  { label: "Careers", href: "/#about" },
+  { label: "News", href: "/#about" },
+];
+
+const RESOURCES = [
+  { label: "Materials", href: "/#resources" },
+  { label: "Process", href: "/#process" },
+  { label: "FAQ", href: "/#resources" },
+  { label: "Contact", href: "mailto:hello@highwellgroup.com" },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-navy-deep text-paper">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div>
             <Image
               src="/brand/highwell-logo.png"
@@ -39,12 +52,17 @@ export default function Footer() {
 
           <div>
             <p className="font-kicker mb-4 text-[10px] text-paper/40">
-              Divisions
+              Capabilities
             </p>
             <ul className="flex flex-col gap-2.5">
-              {DIVISIONS.map((d) => (
-                <li key={d} className="text-sm text-paper/70">
-                  Highwell {d}
+              {CAPABILITIES.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -52,10 +70,46 @@ export default function Footer() {
 
           <div>
             <p className="font-kicker mb-4 text-[10px] text-paper/40">
-              Company
+              Work
             </p>
             <ul className="flex flex-col gap-2.5">
-              {COMPANY.map((item) => (
+              {WORK.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-kicker mb-4 text-[10px] text-paper/40">
+              About
+            </p>
+            <ul className="flex flex-col gap-2.5">
+              {ABOUT.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-kicker mb-4 text-[10px] text-paper/40">
+              Resources
+            </p>
+            <ul className="flex flex-col gap-2.5">
+              {RESOURCES.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}

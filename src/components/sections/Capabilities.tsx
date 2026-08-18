@@ -2,64 +2,88 @@ import Reveal from "@/components/Reveal";
 
 const CAPABILITIES = [
   {
-    title: "Print",
-    body: "From 50 pieces to high-volume commercial production. Business printing, marketing collateral, publications, and specialty finishing.",
+    title: "Print & Collateral",
+    body: "Premium quality print that elevates your brand.",
+    icon: (
+      <>
+        <rect x="6" y="4" width="20" height="24" rx="1" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M10 11H22M10 16H22M10 21H17" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      </>
+    ),
   },
   {
-    title: "Wide Format",
-    body: "Walls, windows, signs, displays, and environments. Banners, vehicle graphics, murals, and dimensional signage.",
-  },
-  {
-    title: "3D",
-    body: "Prototypes, architectural models, dimensional components, and custom pieces. A production method, not a novelty.",
-  },
-  {
-    title: "Laser",
-    body: "Precision cutting, engraving, identification, and fabrication in acrylic, wood, and select metals.",
+    title: "Signage & Displays",
+    body: "Dimensional signage, ADA, wayfinding, and custom displays.",
+    icon: (
+      <>
+        <rect x="4" y="6" width="24" height="15" rx="1" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M16 21V26M11 26H21" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      </>
+    ),
   },
   {
     title: "Fabrication",
-    body: "Dimensional signage, display construction, retail fixtures, and custom-built environmental elements.",
+    body: "Acrylic, metal, wood, and custom builds made in-house.",
+    icon: (
+      <>
+        <path d="M8 24L16 6L24 24" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+        <path d="M12 17H20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      </>
+    ),
+  },
+  {
+    title: "3D Printing",
+    body: "Prototypes, functional parts, and presentation models.",
+    icon: (
+      <>
+        <path d="M16 5L27 11V21L16 27L5 21V11L16 5Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+        <path d="M16 5V16M16 16L27 11M16 16L5 11M16 16V27" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+      </>
+    ),
   },
   {
     title: "Packaging",
-    body: "Folding cartons, sleeves, labels, inserts, and branded kits, prototyped and produced under one roof.",
+    body: "Custom packaging that protects and impresses.",
+    icon: (
+      <>
+        <path d="M6 12L16 7L26 12L16 17L6 12Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+        <path d="M6 12V22L16 27M26 12V22L16 27M16 17V27" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+      </>
+    ),
   },
   {
-    title: "Mail",
-    body: "Database processing, variable-data production, addressing, sorting, and postal preparation.",
-  },
-  {
-    title: "Fulfillment",
-    body: "Storage and distribution for multi-location brands. Your outsourced physical brand department.",
+    title: "Mail & Fulfillment",
+    body: "Kitting, assembly, mailing, and nationwide delivery.",
+    icon: (
+      <>
+        <rect x="4" y="10" width="18" height="13" rx="1" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M22 14H26L28 17V23H22V14Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+        <circle cx="10" cy="24.5" r="1.6" stroke="currentColor" strokeWidth="1.2" />
+        <circle cx="23" cy="24.5" r="1.6" stroke="currentColor" strokeWidth="1.2" />
+      </>
+    ),
   },
 ];
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-        <Reveal>
-          <h2 className="font-display max-w-2xl text-3xl uppercase leading-tight text-ink md:text-5xl">
-            One shop. A lot of ways to make.
-          </h2>
-        </Reveal>
-
-        <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {CAPABILITIES.map((cap, i) => (
-            <Reveal
-              key={cap.title}
-              delay={i * 0.02}
-              className="group relative bg-surface p-7 transition-colors duration-300 hover:bg-paper"
-            >
-              <p className="font-display text-lg text-ink">{cap.title}</p>
-              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                {cap.body}
-              </p>
-              <span className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-navy transition-transform duration-300 group-hover:scale-x-100" />
-            </Reveal>
-          ))}
-        </div>
+    <section id="capabilities" className="border-b border-border bg-navy-deep text-paper">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-paper/15 px-6 py-12 md:grid-cols-3 md:px-10 xl:grid-cols-6">
+        {CAPABILITIES.map((cap, i) => (
+          <Reveal
+            key={cap.title}
+            delay={i * 0.02}
+            className="group flex flex-col items-center px-4 py-6 text-center"
+          >
+            <svg viewBox="0 0 32 32" fill="none" className="h-7 w-7 text-lavender-light">
+              {cap.icon}
+            </svg>
+            <p className="font-kicker mt-4 text-[11px] text-paper">{cap.title}</p>
+            <p className="mt-2 text-xs leading-relaxed text-paper/60">
+              {cap.body}
+            </p>
+          </Reveal>
+        ))}
       </div>
     </section>
   );

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Big_Shoulders, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SkipLink from "@/components/SkipLink";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const bigShoulders = Big_Shoulders({
+  variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["600", "800"],
 });
 
 const inter = Inter({
@@ -54,9 +55,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${bigShoulders.variable} ${inter.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background">
+        <SkipLink />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -79,7 +81,9 @@ export default function RootLayout({
           }}
         />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

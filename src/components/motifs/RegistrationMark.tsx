@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 export default function RegistrationMark({
   className,
   style,
@@ -5,11 +9,27 @@ export default function RegistrationMark({
   className?: string;
   style?: React.CSSProperties;
 }) {
+  const ref = useRef<SVGSVGElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "100px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <svg
+      ref={ref}
       viewBox="0 0 40 40"
       fill="none"
-      className={className}
+      className={`motion-gate ${className ?? ""}`}
+      data-inview={inView}
       style={style}
       aria-hidden
     >

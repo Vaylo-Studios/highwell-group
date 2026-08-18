@@ -4,7 +4,7 @@ import CropMark from "@/components/motifs/CropMark";
 
 export default function Pathways() {
   return (
-    <section className="border-b border-border bg-surface">
+    <section id="resources" className="border-b border-border bg-surface">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
         <Reveal>
           <p className="font-kicker mb-4 text-[11px] text-navy">
@@ -33,7 +33,7 @@ export default function Pathways() {
             </p>
             <Link
               href="/#"
-              className="mt-8 inline-block rounded-sm border border-border-hover px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-navy"
+              className="btn-press mt-8 inline-block rounded-sm border border-border-hover px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-navy"
             >
               Browse the Shop
             </Link>
@@ -57,7 +57,7 @@ export default function Pathways() {
             </p>
             <Link
               href="mailto:hello@highwellgroup.com"
-              className="mt-8 inline-block rounded-sm bg-paper px-6 py-3 text-sm font-medium text-navy transition-colors hover:brightness-95"
+              className="btn-press mt-8 inline-block rounded-sm bg-paper px-6 py-3 text-sm font-medium text-navy transition-colors hover:brightness-95"
             >
               Start a Project
             </Link>

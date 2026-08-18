@@ -39,8 +39,8 @@ export default function NavLinks() {
             key={item.label}
             href={item.href}
             aria-current={isActive ? "location" : undefined}
-            className={`font-kicker text-[11px] transition-colors ${
-              isActive ? "text-navy" : "text-text-secondary hover:text-navy"
+            className={`text-[13px] font-medium uppercase tracking-wide transition-colors ${
+              isActive ? "text-navy" : "text-ink/80 hover:text-navy"
             }`}
           >
             {item.label}

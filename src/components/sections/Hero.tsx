@@ -1,27 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import CropMark from "@/components/motifs/CropMark";
-import RegistrationMark from "@/components/motifs/RegistrationMark";
-import DimensionLine from "@/components/motifs/DimensionLine";
 import HeroHeadline from "@/components/HeroHeadline";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-paper lg:min-h-[620px]">
-      <div className="bg-grid pointer-events-none absolute inset-0 opacity-[0.35] [mask-image:linear-gradient(to_bottom,black,transparent_75%)]" />
-
-      <CropMark className="pointer-events-none absolute left-6 top-6 z-20 h-6 w-6 text-border-hover md:left-10 md:top-8" />
-      <CropMark className="pointer-events-none absolute right-6 top-6 z-20 h-6 w-6 text-border-hover md:right-10 md:top-8" />
-
-      <RegistrationMark className="animate-registration-spin pointer-events-none absolute right-[44%] top-24 z-20 hidden h-24 w-24 text-lavender/25 lg:block" />
-
+    <section className="relative overflow-hidden bg-paper lg:min-h-[620px]">
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24 lg:py-28">
         <div className="lg:w-[46%]">
-          <Reveal className="font-kicker mb-6 text-[11px] text-navy">
-            Est. 1997 &middot; Largo / Clearwater, FL
-          </Reveal>
-
           <HeroHeadline />
 
           <Reveal delay={0.15}>
@@ -34,14 +20,10 @@ export default function Hero() {
           <Reveal delay={0.2} className="mt-10">
             <Link
               href="/#project"
-              className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-navy"
+              className="btn-press inline-block rounded-lg bg-lavender-ink px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-navy"
             >
               See What We Can Do &rarr;
             </Link>
-          </Reveal>
-
-          <Reveal delay={0.25} className="mt-16 max-w-md">
-            <DimensionLine label="MADE IN FLORIDA / BUILT FOR BUSINESS" />
           </Reveal>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function CtaBand() {
         <Reveal delay={0.08}>
           <Link
             href="mailto:hello@highwellgroup.com"
-            className="btn-press inline-block rounded-full bg-navy-deep px-8 py-4 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-ink"
+            className="btn-press inline-block rounded-lg bg-navy-deep px-8 py-4 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-ink"
           >
             Get Started &rarr;
           </Link>

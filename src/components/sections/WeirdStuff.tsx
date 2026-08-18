@@ -38,7 +38,7 @@ export default function WeirdStuff() {
           <Reveal delay={0.1} className="mt-8">
             <Link
               href="mailto:hello@highwellgroup.com"
-              className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-paper hover:text-ink"
+              className="btn-press inline-block rounded-lg bg-lavender-ink px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-paper hover:text-ink"
             >
               Let&rsquo;s Make It Happen &rarr;
             </Link>

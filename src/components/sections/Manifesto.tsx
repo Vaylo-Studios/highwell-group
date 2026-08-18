@@ -53,11 +53,25 @@ export default function Manifesto() {
               </p>
             </Reveal>
             <Reveal delay={0.14}>
-              <div className="mt-9 flex items-center gap-5">
-                <span className="h-px w-12 bg-lavender-light/60" aria-hidden="true" />
-                <p className="font-display text-2xl uppercase tracking-wide text-paper md:text-3xl">
-                  Make it real.
-                </p>
+              <div className="mt-10 border-t border-paper/15">
+                {[
+                  { from: "A logo on a laptop", to: "Channel letters on a storefront" },
+                  { from: "A CAD file", to: "A machined prototype in your hand" },
+                  { from: "A napkin sketch", to: "A forty-foot trade show booth" },
+                ].map((row) => (
+                  <div
+                    key={row.from}
+                    className="flex items-baseline justify-between gap-4 border-b border-paper/15 py-4"
+                  >
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-paper/45">
+                      {row.from}
+                    </p>
+                    <span className="hidden h-px flex-1 bg-paper/10 sm:block" aria-hidden="true" />
+                    <p className="text-right text-[11px] font-semibold uppercase tracking-[0.14em] text-lavender-light">
+                      {row.to}
+                    </p>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>
@@ -83,6 +97,14 @@ export default function Manifesto() {
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.08}>
+          <div className="mt-16 border-t border-paper/15 pt-10">
+            <p className="font-display text-5xl uppercase leading-none tracking-tight md:text-7xl lg:text-8xl">
+              Make it <span className="text-lavender-light">real.</span>
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

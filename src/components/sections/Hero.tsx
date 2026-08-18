@@ -16,42 +16,47 @@ export default function Hero() {
 
       <RegistrationMark className="animate-registration-spin pointer-events-none absolute -right-10 top-24 hidden h-24 w-24 text-lavender/25 lg:block" />
 
-      <Reveal delay={0.15} className="absolute inset-y-0 right-0 hidden w-[44%] lg:block">
-        <Image
-          src="/images/hero-make-it-real.jpg"
-          alt="Highwell-produced branded packaging, signage, and dimensional pieces"
-          fill
-          priority
-          sizes="44vw"
-          className="object-cover"
-        />
-      </Reveal>
+      <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24 lg:flex lg:items-start lg:gap-12">
+        <div className="lg:w-[46%]">
+          <Reveal className="font-kicker mb-6 text-[11px] text-navy">
+            Est. 1997 &middot; Largo / Clearwater, FL
+          </Reveal>
 
-      <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:pr-[48%]">
-        <Reveal className="font-kicker mb-6 text-[11px] text-navy">
-          Est. 1997 &middot; Largo / Clearwater, FL
-        </Reveal>
+          <HeroHeadline />
 
-        <HeroHeadline />
+          <Reveal delay={0.15}>
+            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-text-secondary">
+              Highwell Group brings ideas to life through print, fabrication,
+              3D, packaging, and fulfillment, all under one roof.
+            </p>
+          </Reveal>
 
-        <Reveal delay={0.15}>
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-text-secondary">
-            Highwell Group brings ideas to life through print, fabrication,
-            3D, packaging, and fulfillment, all under one roof.
-          </p>
-        </Reveal>
+          <Reveal delay={0.2} className="mt-10">
+            <Link
+              href="/#project"
+              className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-navy"
+            >
+              See What We Can Do &rarr;
+            </Link>
+          </Reveal>
 
-        <Reveal delay={0.2} className="mt-10">
-          <Link
-            href="/#project"
-            className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-navy"
-          >
-            See What We Can Do &rarr;
-          </Link>
-        </Reveal>
+          <Reveal delay={0.25} className="mt-16 max-w-md">
+            <DimensionLine label="MADE IN FLORIDA / BUILT FOR BUSINESS" />
+          </Reveal>
+        </div>
 
-        <Reveal delay={0.25} className="mt-16 max-w-md">
-          <DimensionLine label="MADE IN FLORIDA / BUILT FOR BUSINESS" />
+        <Reveal
+          delay={0.15}
+          className="relative mt-14 aspect-[4/3] overflow-hidden rounded-sm lg:mt-0 lg:w-[54%]"
+        >
+          <Image
+            src="/images/hero-make-it-real.jpg"
+            alt="Highwell-produced branded packaging, signage, and dimensional pieces"
+            fill
+            priority
+            sizes="(min-width: 1024px) 54vw, 100vw"
+            className="object-cover"
+          />
         </Reveal>
       </div>
     </section>

@@ -90,7 +90,7 @@ export default function Footer() {
               alt="Highwell Group"
               width={1178}
               height={70}
-              className="h-6 w-auto brightness-0 invert"
+              className="h-auto w-full max-w-[260px] brightness-0 invert"
             />
             <p className="mt-4 max-w-[26ch] text-sm leading-relaxed text-paper/60">
               We make brands real through print, signage, fabrication, 3D,

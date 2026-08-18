@@ -5,19 +5,21 @@ import RegistrationMark from "@/components/motifs/RegistrationMark";
 
 export default function WeirdStuff() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-ink text-paper">
-      <RegistrationMark className="animate-mark-drift pointer-events-none absolute -bottom-20 -right-16 h-64 w-64 text-paper/10" />
+    <section className="relative overflow-hidden border-b border-border bg-navy-deep text-paper lg:min-h-[560px]">
+      <RegistrationMark className="animate-mark-drift pointer-events-none absolute -bottom-20 -right-16 z-20 h-64 w-64 text-paper/10" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
-        <Reveal className="relative order-2 aspect-square overflow-hidden rounded-sm lg:order-1 lg:-ml-10 lg:aspect-[4/5]">
-          <Image
-            src="/images/project-weird-stuff.jpg"
-            alt="A backlit 3D-printed clockwork gear sculpture"
-            fill
-            sizes="(min-width: 1024px) 45vw, 90vw"
-            className="object-cover"
-          />
-        </Reveal>
+      <Reveal className="relative order-2 z-0 aspect-square overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:order-1 lg:aspect-auto lg:w-[45%]">
+        <Image
+          src="/images/project-weird-stuff.jpg"
+          alt="A backlit 3D-printed clockwork gear sculpture"
+          fill
+          sizes="(min-width: 1024px) 45vw, 90vw"
+          className="object-cover"
+        />
+      </Reveal>
+
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-24 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+        <div className="order-2 hidden lg:order-1 lg:block" aria-hidden="true" />
 
         <div className="order-1 lg:order-2">
           <Reveal>

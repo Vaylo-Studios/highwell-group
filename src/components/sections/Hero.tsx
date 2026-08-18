@@ -8,15 +8,15 @@ import HeroHeadline from "@/components/HeroHeadline";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-paper">
+    <section className="relative overflow-hidden border-b border-border bg-paper lg:min-h-[620px]">
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-[0.35] [mask-image:linear-gradient(to_bottom,black,transparent_75%)]" />
 
-      <CropMark className="pointer-events-none absolute left-6 top-6 h-6 w-6 text-border-hover md:left-10 md:top-8" />
-      <CropMark className="pointer-events-none absolute right-6 top-6 h-6 w-6 text-border-hover md:right-10 md:top-8" />
+      <CropMark className="pointer-events-none absolute left-6 top-6 z-20 h-6 w-6 text-border-hover md:left-10 md:top-8" />
+      <CropMark className="pointer-events-none absolute right-6 top-6 z-20 h-6 w-6 text-border-hover md:right-10 md:top-8" />
 
-      <RegistrationMark className="animate-registration-spin pointer-events-none absolute -right-10 top-24 hidden h-24 w-24 text-lavender/25 lg:block" />
+      <RegistrationMark className="animate-registration-spin pointer-events-none absolute right-[44%] top-24 z-20 hidden h-24 w-24 text-lavender/25 lg:block" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24 lg:flex lg:items-start lg:gap-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24 lg:py-28">
         <div className="lg:w-[46%]">
           <Reveal className="font-kicker mb-6 text-[11px] text-navy">
             Est. 1997 &middot; Largo / Clearwater, FL
@@ -44,21 +44,21 @@ export default function Hero() {
             <DimensionLine label="MADE IN FLORIDA / BUILT FOR BUSINESS" />
           </Reveal>
         </div>
-
-        <Reveal
-          delay={0.15}
-          className="relative mt-14 aspect-[4/3] overflow-hidden rounded-sm lg:mt-0 lg:w-[54%]"
-        >
-          <Image
-            src="/images/hero-make-it-real.jpg"
-            alt="Highwell-produced branded packaging, signage, and dimensional pieces"
-            fill
-            priority
-            sizes="(min-width: 1024px) 54vw, 100vw"
-            className="object-cover"
-          />
-        </Reveal>
       </div>
+
+      <Reveal
+        delay={0.15}
+        className="relative z-0 mt-4 aspect-[4/3] overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:mt-0 lg:aspect-auto lg:w-[54%]"
+      >
+        <Image
+          src="/images/hero-make-it-real.jpg"
+          alt="Highwell-produced branded packaging, signage, and dimensional pieces"
+          fill
+          priority
+          sizes="(min-width: 1024px) 54vw, 100vw"
+          className="object-cover"
+        />
+      </Reveal>
     </section>
   );
 }

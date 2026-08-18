@@ -2,11 +2,11 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const MATERIALS = [
-  { src: "/images/image-20260818-122752-4e7691-capability-print.jpeg", alt: "Close-up of a folded two-tone printed presentation piece" },
-  { src: "/images/image-20260818-123027-4ae568-capability-signage.jpeg", alt: "Close-up of a mounted acrylic sign edge" },
-  { src: "/images/image-20260818-123255-28ee8e-capability-fabrication.jpeg", alt: "Close-up of layered wood and acrylic fabrication" },
-  { src: "/images/image-20260818-123521-e701ca-capability-3d-printing.jpeg", alt: "Close-up of a lattice-structured 3D-printed part" },
-  { src: "/images/image-20260818-123747-8d3941-capability-packaging.jpeg", alt: "Close-up of an open rigid gift box corner" },
+  { src: "/images/capability-print.jpg", alt: "Close-up of a folded two-tone printed presentation piece" },
+  { src: "/images/capability-signage.jpg", alt: "Close-up of a mounted acrylic sign edge" },
+  { src: "/images/capability-fabrication.jpg", alt: "Close-up of layered wood and acrylic fabrication" },
+  { src: "/images/capability-3d-printing.jpg", alt: "Close-up of a lattice-structured 3D-printed part" },
+  { src: "/images/capability-packaging.jpg", alt: "Close-up of an open rigid gift box corner" },
 ];
 
 export default function MaterialsStrip() {

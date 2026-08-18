@@ -4,13 +4,13 @@ import CropMark from "@/components/motifs/CropMark";
 
 export default function Manifesto() {
   return (
-    <section id="about" className="relative overflow-hidden bg-ink text-paper">
+    <section id="about" className="relative overflow-hidden bg-navy-deep text-paper">
       <CropMark className="pointer-events-none absolute left-6 top-6 h-6 w-6 text-paper/15 md:left-10 md:top-8" />
       <CropMark className="pointer-events-none absolute bottom-6 right-6 h-6 w-6 text-paper/15 md:bottom-8 md:right-10" />
 
       <Reveal className="relative mx-auto aspect-[21/9] max-w-6xl overflow-hidden md:mt-12 md:rounded-sm">
         <Image
-          src="/images/image-20260818-121151-87082b-shop-floor-wide.jpeg"
+          src="/images/shop-floor-wide.jpg"
           alt="Wide view of the Highwell Group production floor"
           fill
           sizes="(min-width: 1280px) 1152px, 100vw"

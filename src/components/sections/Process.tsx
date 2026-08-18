@@ -3,17 +3,17 @@ import Reveal from "@/components/Reveal";
 
 const STEPS = [
   {
-    src: "/images/image-20260818-121444-6c4a36-process-laser-cutting.jpeg",
+    src: "/images/process-laser-cutting.jpg",
     alt: "A technician guiding a laser cutter through a sheet of acrylic",
     label: "Cut",
   },
   {
-    src: "/images/image-20260818-121637-3afb94-process-hand-finishing.jpeg",
+    src: "/images/process-hand-finishing.jpg",
     alt: "A technician hand-polishing a finished acrylic piece",
     label: "Finish",
   },
   {
-    src: "/images/image-20260818-121857-de5609-process-press.jpeg",
+    src: "/images/process-press.jpg",
     alt: "A technician loading stock into a printing press",
     label: "Print",
   },

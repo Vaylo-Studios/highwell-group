@@ -30,7 +30,7 @@ export default function NavLinks() {
   }, []);
 
   return (
-    <nav className="hidden items-center gap-8 md:flex">
+    <nav className="hidden flex-1 items-center justify-center gap-10 px-8 md:flex lg:gap-14">
       {NAV.map((item) => {
         const id = item.href.replace("/#", "");
         const isActive = id === active;
@@ -39,8 +39,8 @@ export default function NavLinks() {
             key={item.label}
             href={item.href}
             aria-current={isActive ? "location" : undefined}
-            className={`text-[13px] font-medium uppercase tracking-wide transition-colors ${
-              isActive ? "text-navy" : "text-ink/80 hover:text-navy"
+            className={`text-[12px] font-semibold uppercase tracking-[0.1em] transition-colors ${
+              isActive ? "text-navy-deep" : "text-ink/75 hover:text-navy-deep"
             }`}
           >
             {item.label}

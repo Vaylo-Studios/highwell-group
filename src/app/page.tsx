@@ -1,14 +1,8 @@
 import Hero from "@/components/sections/Hero";
-import StatsBar from "@/components/sections/StatsBar";
-import MaterialsStrip from "@/components/sections/MaterialsStrip";
 import Capabilities from "@/components/sections/Capabilities";
-import Scale from "@/components/sections/Scale";
 import Proof from "@/components/sections/Proof";
-import Process from "@/components/sections/Process";
 import WeirdStuff from "@/components/sections/WeirdStuff";
-import Industries from "@/components/sections/Industries";
-import Pathways from "@/components/sections/Pathways";
-import Manifesto from "@/components/sections/Manifesto";
+import StatsBar from "@/components/sections/StatsBar";
 import CtaBand from "@/components/sections/CtaBand";
 
 export default function Home() {
@@ -17,14 +11,8 @@ export default function Home() {
       <Hero />
       <Capabilities />
       <Proof />
-      <Process />
-      <Scale />
-      <Industries />
-      <Pathways />
-      <Manifesto />
       <WeirdStuff />
       <StatsBar />
-      <MaterialsStrip />
       <CtaBand />
     </>
   );

@@ -67,18 +67,18 @@ const CAPABILITIES = [
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="border-b border-border bg-navy-deep text-paper">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-paper/15 px-6 py-12 md:grid-cols-3 md:px-10 xl:grid-cols-6">
+    <section id="capabilities" className="bg-navy-deep text-paper">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-paper/15 px-6 py-12 md:grid-cols-3 md:px-10 lg:grid-cols-6">
         {CAPABILITIES.map((cap, i) => (
           <Reveal
             key={cap.title}
             delay={i * 0.02}
             className="group flex flex-col items-center px-4 py-6 text-center"
           >
-            <svg viewBox="0 0 32 32" fill="none" className="h-7 w-7 text-lavender-light">
+            <svg viewBox="0 0 32 32" fill="none" className="h-7 w-7 text-paper/80">
               {cap.icon}
             </svg>
-            <p className="font-kicker mt-4 text-[11px] text-paper">{cap.title}</p>
+            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.08em] text-paper">{cap.title}</p>
             <p className="mt-2 text-xs leading-relaxed text-paper/60">
               {cap.body}
             </p>

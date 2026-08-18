@@ -3,20 +3,20 @@ import Reveal from "@/components/Reveal";
 
 export default function CtaBand() {
   return (
-    <section className="border-b border-border bg-lavender-ink text-paper">
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between md:px-10">
+    <section id="project" className="bg-lavender-light text-white">
+      <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 py-8 md:flex-row md:items-center md:gap-12 md:px-10">
         <Reveal>
-          <h2 className="font-display text-3xl uppercase leading-tight text-paper md:text-5xl">
+          <h2 className="font-display text-xl uppercase leading-tight md:text-2xl">
             Ready to make it real?
           </h2>
-          <p className="mt-3 text-[15px] text-paper/80">
+          <p className="mt-1 text-[13px] text-white/85">
             Let&rsquo;s talk about your next project.
           </p>
         </Reveal>
         <Reveal delay={0.08}>
           <Link
             href="mailto:hello@highwellgroup.com"
-            className="btn-press inline-block rounded-lg bg-navy-deep px-8 py-4 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-ink"
+            className="btn-press inline-block rounded-lg bg-navy-deep px-7 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-paper transition-colors hover:bg-navy"
           >
             Get Started &rarr;
           </Link>

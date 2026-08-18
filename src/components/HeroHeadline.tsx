@@ -22,7 +22,7 @@ export default function HeroHeadline() {
           animate={{ y: "0%" }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
         >
-          It <span className="text-lavender-ink">Real</span>
+          It <span className="text-lavender">Real</span>
         </motion.span>
       </span>
     </h1>

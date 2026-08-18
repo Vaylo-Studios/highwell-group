@@ -3,10 +3,10 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const GALLERY = [
-  { src: "/images/signage-displays.jpg", alt: "Backlit dimensional signage and a hexagon-panel display in an office lobby" },
-  { src: "/images/print.jpg", alt: "Branded folder and business card flat lay" },
-  { src: "/images/packaging.jpg", alt: "Branded gift packaging and coordinating cards" },
-  { src: "/images/mail-fulfillment.jpg", alt: "Branded shipping boxes and mailers staged for fulfillment" },
+  { src: "/images/signage-displays.jpg", alt: "Backlit dimensional wall signage in an office lobby", position: "left" },
+  { src: "/images/print.jpg", alt: "Branded folder and business card flat lay", position: "center" },
+  { src: "/images/mail-fulfillment.jpg", alt: "Branded shipping boxes and mailers staged for fulfillment", position: "center" },
+  { src: "/images/signage-displays.jpg", alt: "Hexagon-panel display in an office lobby", position: "right" },
 ];
 
 export default function Proof() {
@@ -34,7 +34,7 @@ export default function Proof() {
         <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {GALLERY.map((img, i) => (
             <Reveal
-              key={img.src}
+              key={`${img.src}-${i}`}
               delay={i * 0.04}
               className="relative aspect-[3/4] overflow-hidden rounded-sm border border-border"
             >
@@ -43,6 +43,7 @@ export default function Proof() {
                 alt={img.alt}
                 fill
                 sizes="(min-width: 768px) 25vw, 50vw"
+                style={{ objectPosition: img.position }}
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </Reveal>

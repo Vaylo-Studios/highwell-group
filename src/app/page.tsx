@@ -15,16 +15,16 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <StatsBar />
-      <MaterialsStrip />
       <Capabilities />
       <Proof />
       <Process />
       <Scale />
-      <WeirdStuff />
       <Industries />
       <Pathways />
       <Manifesto />
+      <WeirdStuff />
+      <StatsBar />
+      <MaterialsStrip />
       <CtaBand />
     </>
   );

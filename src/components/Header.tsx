@@ -29,7 +29,7 @@ export default function Header() {
 
         <Link
           href="/#project"
-          className="btn-press hidden rounded-full bg-lavender-ink px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-navy md:inline-block"
+          className="btn-press hidden rounded-full bg-lavender-ink px-6 py-2.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-navy md:inline-block"
         >
           Talk To Us
         </Link>

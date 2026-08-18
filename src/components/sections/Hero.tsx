@@ -34,7 +34,7 @@ export default function Hero() {
           <Reveal delay={0.2} className="mt-10">
             <Link
               href="/#project"
-              className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-navy"
+              className="btn-press inline-block rounded-full bg-lavender-ink px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-paper transition-colors hover:bg-navy"
             >
               See What We Can Do &rarr;
             </Link>

@@ -9,7 +9,7 @@ const STATS = [
 
 export default function StatsBar() {
   return (
-    <section className="border-b border-border bg-background">
+    <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <Reveal className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-6">
           {STATS.map((stat) => (

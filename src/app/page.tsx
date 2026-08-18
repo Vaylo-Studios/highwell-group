@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import StatsBar from "@/components/sections/StatsBar";
+import MaterialsStrip from "@/components/sections/MaterialsStrip";
 import Capabilities from "@/components/sections/Capabilities";
 import Scale from "@/components/sections/Scale";
 import Proof from "@/components/sections/Proof";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <StatsBar />
+      <MaterialsStrip />
       <Capabilities />
       <Proof />
       <Process />

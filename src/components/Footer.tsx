@@ -26,8 +26,8 @@ export default function Footer() {
             <Image
               src="/brand/highwell-logo.png"
               alt="Highwell Group"
-              width={200}
-              height={12}
+              width={1178}
+              height={70}
               className="h-6 w-auto brightness-0 invert"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/60">
@@ -71,7 +71,17 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-paper/10 pt-6 text-xs text-paper/40 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} Highwell Group. Largo / Clearwater, Florida.</p>
-          <p className="font-spec">Founded 1997</p>
+          <p className="font-spec">
+            Founded 1997 &middot; Built by{" "}
+            <a
+              href="https://vaylostudios.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-paper/70 underline underline-offset-4 hover:text-paper"
+            >
+              Vaylo Studios
+            </a>
+          </p>
         </div>
       </div>
     </footer>

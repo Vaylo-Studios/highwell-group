@@ -1,14 +1,10 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import CropMark from "@/components/motifs/CropMark";
 
 export default function Manifesto() {
   return (
     <section id="about" className="relative overflow-hidden bg-navy-deep text-paper">
-      <CropMark className="pointer-events-none absolute left-6 top-6 h-6 w-6 text-paper/15 md:left-10 md:top-8" />
-      <CropMark className="pointer-events-none absolute bottom-6 right-6 h-6 w-6 text-paper/15 md:bottom-8 md:right-10" />
-
-      <Reveal className="relative mx-auto aspect-[21/9] max-w-6xl overflow-hidden md:mt-12 md:rounded-sm">
+      <Reveal className="relative mx-auto aspect-[21/9] max-w-6xl overflow-hidden md:mt-12">
         <Image
           src="/images/shop-floor-wide.jpg"
           alt="Wide view of the Highwell Group production floor"
@@ -18,9 +14,9 @@ export default function Manifesto() {
         />
       </Reveal>
 
-      <div className="relative mx-auto max-w-3xl px-6 py-28 text-center md:px-10">
+      <div className="relative mx-auto max-w-3xl px-6 py-24 text-center md:px-10">
         <Reveal>
-          <p className="font-kicker mb-6 text-[11px] text-lavender-light">
+          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-lavender-light">
             The Idea
           </p>
         </Reveal>
@@ -47,7 +43,7 @@ export default function Manifesto() {
           </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="font-display mt-12 text-4xl uppercase text-paper md:text-6xl">
+          <p className="font-display mt-12 text-4xl uppercase text-lavender-light md:text-6xl">
             Make it real.
           </p>
         </Reveal>

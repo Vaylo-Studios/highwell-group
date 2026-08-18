@@ -9,7 +9,7 @@ const STATS = [
 
 export default function StatsBar() {
   return (
-    <section id="about" className="relative overflow-hidden bg-background">
+    <section className="relative overflow-hidden bg-background">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-28 top-1/2 hidden h-80 w-80 -translate-y-1/2 rounded-full border-[42px] border-lavender-light/60 lg:block"

@@ -16,10 +16,10 @@ const INDUSTRIES = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+    <section id="industries" className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <Reveal>
-          <h2 className="font-display max-w-2xl text-3xl uppercase leading-tight text-ink md:text-5xl">
+          <h2 className="font-display max-w-2xl text-3xl uppercase leading-tight text-navy-deep md:text-4xl">
             Defined by the problem, not the product.
           </h2>
         </Reveal>
@@ -29,10 +29,10 @@ export default function Industries() {
             <Reveal
               key={ind.name}
               delay={i * 0.03}
-              className="group border-b border-border py-7 pr-6 transition-colors duration-300 hover:bg-surface lg:border-r lg:py-8 lg:pl-6 lg:[&:nth-child(3n)]:border-r-0"
+              className="group border-b border-border py-7 pr-6 lg:border-r lg:py-8 lg:pl-6 lg:[&:nth-child(3n)]:border-r-0"
             >
-              <span className="block h-[2px] w-6 origin-left scale-x-0 bg-navy transition-transform duration-300 group-hover:scale-x-100" />
-              <p className="font-display mt-3 text-lg text-ink">
+              <span className="block h-[2px] w-6 origin-left scale-x-0 bg-lavender transition-transform duration-300 group-hover:scale-x-100" />
+              <p className="font-display mt-3 text-lg uppercase text-navy-deep">
                 {ind.name}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-text-secondary">

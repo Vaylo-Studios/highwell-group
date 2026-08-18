@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 
 export default function CtaBand() {
   return (
-    <section id="project" className="bg-lavender-light text-white">
+    <section className="bg-lavender-light text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 py-8 md:flex-row md:items-center md:gap-12 md:px-10">
         <Reveal>
           <h2 className="font-display text-xl uppercase leading-tight md:text-2xl">

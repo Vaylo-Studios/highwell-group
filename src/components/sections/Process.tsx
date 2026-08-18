@@ -21,10 +21,10 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+    <section id="process" className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="font-display max-w-xl text-3xl uppercase leading-tight text-ink md:text-5xl">
+          <h2 className="font-display max-w-xl text-3xl uppercase leading-tight text-navy-deep md:text-4xl">
             Real hands. Real machines.
           </h2>
           <p className="max-w-sm text-sm leading-relaxed text-text-secondary">
@@ -33,12 +33,12 @@ export default function Process() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-3 md:grid-cols-3 md:gap-4">
+        <div className="mt-12 grid gap-2 md:grid-cols-3">
           {STEPS.map((step, i) => (
             <Reveal
               key={step.src}
               delay={i * 0.06}
-              className="group relative aspect-[4/5] overflow-hidden rounded-sm border border-border"
+              className="group relative aspect-[4/5] overflow-hidden"
             >
               <Image
                 src={step.src}
@@ -47,8 +47,8 @@ export default function Process() {
                 sizes="(min-width: 768px) 33vw, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-              <p className="font-kicker absolute bottom-5 left-5 text-[11px] text-paper">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
+              <p className="absolute bottom-5 left-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-paper">
                 {step.label}
               </p>
             </Reveal>

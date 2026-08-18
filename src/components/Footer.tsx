@@ -13,7 +13,7 @@ const CAPABILITIES = [
 const WORK = [
   { label: "All Projects", href: "/#work" },
   { label: "Case Studies", href: "/#work" },
-  { label: "Industries", href: "/#work" },
+  { label: "Industries", href: "/#industries" },
 ];
 
 const ABOUT = [
@@ -25,7 +25,7 @@ const ABOUT = [
 
 const RESOURCES = [
   { label: "Materials", href: "/#capabilities" },
-  { label: "Process", href: "/#capabilities" },
+  { label: "Process", href: "/#process" },
   { label: "FAQ", href: "/#about" },
   { label: "Contact", href: "mailto:hello@highwellgroup.com" },
 ];
@@ -76,7 +76,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer id="resources" className="relative overflow-hidden bg-navy-deep text-paper">
+    <footer className="relative overflow-hidden bg-navy-deep text-paper">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-24 -right-16 hidden h-64 w-64 rounded-full bg-lavender-light/25 lg:block"

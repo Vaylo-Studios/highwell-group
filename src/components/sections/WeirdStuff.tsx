@@ -16,13 +16,13 @@ export default function WeirdStuff() {
         <circle cx="280" cy="280" r="274" stroke="currentColor" strokeWidth="1.5" strokeDasharray="320 150" />
       </svg>
 
-      <Reveal className="relative z-0 order-2 aspect-square overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:order-1 lg:aspect-auto lg:w-[48%] lg:[mask-image:linear-gradient(to_left,transparent,black_22%)]">
+      <Reveal className="relative z-0 order-2 aspect-square overflow-hidden mix-blend-screen lg:absolute lg:inset-y-0 lg:left-0 lg:order-1 lg:aspect-auto lg:w-[48%] lg:[mask-image:linear-gradient(to_left,transparent,black_22%)]">
         <Image
           src="/images/project-weird-stuff.jpg"
           alt="A backlit 3D-printed clockwork gear sculpture"
           fill
           sizes="(min-width: 1024px) 48vw, 90vw"
-          className="object-cover mix-blend-screen"
+          className="object-cover"
         />
       </Reveal>
 

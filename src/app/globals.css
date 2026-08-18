@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f7f5;
+  --background: #f7f4ef;
   --surface: #ffffff;
   --surface-elevated: #eef0ee;
   --border: #dde1de;
@@ -12,7 +12,7 @@
   --lavender-ink: #4d5490;
   --lavender-light: #9098c9;
   --ink: #16211c;
-  --paper: #f6f7f5;
+  --paper: #f7f4ef;
   --magenta: #ec008c;
   --text-primary: #16211c;
   --text-secondary: #4c564f;

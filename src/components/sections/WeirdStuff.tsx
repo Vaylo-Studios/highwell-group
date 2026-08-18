@@ -1,20 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import RegistrationMark from "@/components/motifs/RegistrationMark";
 
 export default function WeirdStuff() {
   return (
     <section className="relative overflow-hidden bg-navy-deep text-paper lg:min-h-[440px]">
-      <RegistrationMark className="animate-mark-drift pointer-events-none absolute -right-16 -top-20 z-20 h-64 w-64 text-paper/10" />
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 560 560"
+        fill="none"
+        className="pointer-events-none absolute -right-52 top-1/2 hidden h-[620px] w-[620px] -translate-y-1/2 text-lavender/50 lg:block"
+      >
+        <circle cx="280" cy="280" r="170" stroke="currentColor" strokeWidth="1.5" strokeDasharray="200 90" />
+        <circle cx="280" cy="280" r="222" stroke="currentColor" strokeWidth="1.5" strokeDasharray="260 120" />
+        <circle cx="280" cy="280" r="274" stroke="currentColor" strokeWidth="1.5" strokeDasharray="320 150" />
+      </svg>
 
-      <Reveal className="relative order-2 z-0 aspect-square overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:order-1 lg:aspect-auto lg:w-[45%]">
+      <Reveal className="relative z-0 order-2 aspect-square overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:order-1 lg:aspect-auto lg:w-[48%] lg:[mask-image:linear-gradient(to_left,transparent,black_22%)]">
         <Image
           src="/images/project-weird-stuff.jpg"
           alt="A backlit 3D-printed clockwork gear sculpture"
           fill
-          sizes="(min-width: 1024px) 45vw, 90vw"
-          className="object-cover"
+          sizes="(min-width: 1024px) 48vw, 90vw"
+          className="object-cover mix-blend-screen"
         />
       </Reveal>
 
